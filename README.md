@@ -10,7 +10,7 @@ Assign Tasks
 
 Create Repository
 
-Create mockup of Machince learning model
+Create mockup of Machine learning model
 
 Create mockup of the database
 
