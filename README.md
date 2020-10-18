@@ -9,7 +9,7 @@ With this project we will be asking the following questions in the analysis:
 
 -Which contributing factors are most significant in determining voter turnout within the United States?
 
-- How can we help change this in the future?
+-How can we help change this in the future?
 
 -Are the laws of each state affecting the voter turnout?
 
