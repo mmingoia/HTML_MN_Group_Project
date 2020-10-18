@@ -7,3 +7,4 @@
 ## Commits 10/17/2020
 * 2     Updated Natalia's read-in code and conducted partial dataset cleaning with initial linear regression model
 * 3     Cleaned more data on dataset from Natalia's read in code
+* 4     Updated linear regression model to completion
