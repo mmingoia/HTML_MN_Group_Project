@@ -20,3 +20,5 @@ Reported Voting and Registration of the Total Voting-Age Population, by Sex, Rac
 - https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-580.html TABLE 10: Reasons for Not Voting November 2016
 
 - https://www.census.gov/data/tables/2012/demo/voting-and-registration/p20-568.html TABLE 10: Reasons for not voting 2012
+- https://www.census.gov/data/tables/2008/demo/voting-and-registration/p20-562-rv.html Table 12: reasons for not voting 2008
+  -  https://www.census.gov/data/tables/2004/demo/voting-and-registration/p20-556.html Table 12: Reasons for not voting 2004
