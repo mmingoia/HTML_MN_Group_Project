@@ -18,3 +18,5 @@ Reported Voting and Registration of the Total Voting-Age Population, by Sex, Rac
 - Not uploaded. No Downloadable set findable. However at this link: https://news.gallup.com/poll/193376/trump-leads-clinton-historically-bad-image-ratings.aspx * Unfavorability ratings for presidential candidates from 1956 to 2016. Could provide insight into whether it influences turnout.
 
 - https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-580.html TABLE 10: Reasons for Not Voting November 2016
+
+- https://www.census.gov/data/tables/2012/demo/voting-and-registration/p20-568.html TABLE 10: Reasons for not voting 2012
