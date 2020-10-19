@@ -1,3 +1,4 @@
+
 # HTML_ML_Group_Project
 UT DA HTML_ML_Group_Project
 
@@ -14,4 +15,5 @@ With this project we will be asking the following questions in the analysis:
 -Are the laws of each state affecting the voter turnout?
 
 This project does not align or support any political affiliation or party, this analysis is merely analyzing the data on voter turnouts and why this is a problem in the USA.
+
 
