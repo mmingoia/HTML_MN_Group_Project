@@ -6,3 +6,7 @@
 - tested table creation is functional by calling data from the tables.
 
 ## DATASETS
+Uploaded the following datasets to our S3 Bucket.
+
+- https://www.census.gov/data/tables/2004/demo/voting-and-registration/p20-556.html Table 4a  
+Reported Voting and Registration of the Total Voting-Age Population, by Sex, Race and Hispanic Origin, for States: November 2004
