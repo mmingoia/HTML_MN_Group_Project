@@ -17,3 +17,5 @@ With this project we will be asking the following questions in the analysis:
 This project does not align or support any political affiliation or party, this analysis is merely analyzing the data on voter turnouts and why this is a problem in the USA.
 
 
+# Communication Protocols:
+We as a group will communicate though our Slack Channel, during class and after class hours. During our time we will discuss the outline, tasks for each memeber, and assistance as needed to complete the segment on time. 
