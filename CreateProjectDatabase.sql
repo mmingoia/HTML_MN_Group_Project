@@ -151,4 +151,59 @@ CREATE TABLE DemographicData(
 	HispanicPercentVotedCitizen NUMERIC
 );
 
+SELECT * FROM DemographicData;
+
+
+-- Joining Data from Multiple Tables for analysis and saving as new table
+CREATE TABLE turnoutanalysisdata AS
+SELECT
+	td.yearstate,
+	td.electionyear,
+	td.StateAbbreviation,
+	td.StateName,
+	td.VoterTurnout,
+	comp.Competivness,
+	vld.website_pollingplace,
+	vld.website_reg_status,
+	vld.website_precinct_ballot,
+	vld.website_absentee_status,
+	vld.website_provisional_status,
+	vld.reg_rej,
+	vld.prov_partic,
+	vld.prov_rej_all,
+	vld.abs_rej_all_ballots,
+	vld.abs_nonret,
+	vld.uocava_rej,
+	vld.uocava_nonret,
+	vld.eavs_completeness,
+	vld.post_election_audit,
+	vld.nonvoter_illness_onyear_pct,
+	vld.nonvoter_illness_offyear_pct,
+	vld.nonvoter_reg_onyear_pct,
+	vld.nonvoter_reg_offyear_pct,
+	vld.online_reg,
+	vld.wait,
+	vld.residual,
+	vld.pct_reg_of_vep_vrs,
+	demo.PercentCitizenWhite,
+	demo.PercentCitizenBlack,
+	demo.PercentCitizenAsian,
+	demo.PercentCitizenHispanic
+FROM TurnoutData as td
+INNER JOIN DemographicData as demo
+	ON td.yearstate = demo.yearstate
+INNER JOIN VotingLawsData as vld
+	ON td.yearstate = vld.yearstate
+INNER JOIN CompetivnessData as comp
+	on td.yearstate = comp.yearstate;
+
+SELECT * FROM turnoutanalysisdata;
+
+
+
+
+
+
+
+
 
