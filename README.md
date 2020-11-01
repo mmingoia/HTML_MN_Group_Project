@@ -20,14 +20,16 @@ With this project we will be asking the following questions in the analysis:
 
 ## Source of data
 
-Our primary data sources are a combination of government data and a privately funded studies:
+Our primary data sources are a combination of government data and privately funded studies:
 
 -The United States Census Bureau
 
 -Election Prediction Indicators from MIT
 
+-United States Elections Project
+
 
 ## Communication Protocols:
-We as a group will communicate though our Slack Channel, during class and after class hours. During our time we will discuss the outline, tasks for each memeber, and assistance as needed to complete the segment on time. 
+We as a group will communicate though our Slack Channel, during class and after class hours. During our time we will discuss the outline, tasks for each member, and assistance as needed to complete the segment on time.
 
 ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/LuisBranch10-29-2020/Images/download.png).  ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/LuisBranch10-29-2020/Images/download-1.jpg). ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/LuisBranch10-29-2020/Images/download.jpg) 
