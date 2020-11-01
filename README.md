@@ -6,6 +6,8 @@ UT DA HTML_ML_Group_Project
 
 The reasons our team chose the topic of “Vote Turnout Analysis” was because we think this is something interesting concerning the USA elections. When discussing this topic with the team we asked ourselves how high the voter Turnout in the elections is and why has this number not been able to change in a long time. Knowing that the US has had a 45% voter Turnout, we decided to analyze different areas of this data to find out why this is a problem.  
 
+![Vote Turnout]
+
 ## Questions?
 
 With this project we will be asking the following questions in the analysis:
@@ -24,6 +26,7 @@ Our primary data sources are a combination of government data and a privately fu
 
 -Election Prediction Indicators from MIT
 
+![Vote Turnout]
 
 ## Communication Protocols:
 We as a group will communicate though our Slack Channel, during class and after class hours. During our time we will discuss the outline, tasks for each memeber, and assistance as needed to complete the segment on time. 
