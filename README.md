@@ -30,4 +30,4 @@ Our primary data sources are a combination of government data and a privately fu
 ## Communication Protocols:
 We as a group will communicate though our Slack Channel, during class and after class hours. During our time we will discuss the outline, tasks for each memeber, and assistance as needed to complete the segment on time. 
 
-![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/LuisBranch10-29-2020/Images/download.png).  ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/LuisBranch10-29-2020/Images/download-1.jpg)
+![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/LuisBranch10-29-2020/Images/download.png).  ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/LuisBranch10-29-2020/Images/download-1.jpg). ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/LuisBranch10-29-2020/Images/download.jpg) 
