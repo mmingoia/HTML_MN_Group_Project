@@ -6,6 +6,8 @@ UT DA HTML_ML_Group_Project
 
 The reasons our team chose the topic of “Vote Turnout Analysis” was because we think this is something interesting concerning the USA elections. When discussing this topic with the team we asked ourselves how high the voter Turnout in the elections is and why has this number not been able to change in a long time. Knowing that the US has had a 45% voter Turnout, we decided to analyze different areas of this data to find out why this is a problem.  
 
+## Questions?
+
 With this project we will be asking the following questions in the analysis:
 
 -Which contributing factors are most significant in determining voter turnout within the United States?
@@ -14,8 +16,14 @@ With this project we will be asking the following questions in the analysis:
 
 -Are the laws of each state affecting the voter turnout?
 
-This project does not align or support any political affiliation or party, this analysis is merely analyzing the data on voter turnouts and why this is a problem in the USA.
+## Source of data
+
+Our primary data sources are a combination of government data and a privately funded studies:
+
+-The United States Census Bureau
+
+-Election Prediction Indicators from MIT
 
 
-# Communication Protocols:
+## Communication Protocols:
 We as a group will communicate though our Slack Channel, during class and after class hours. During our time we will discuss the outline, tasks for each memeber, and assistance as needed to complete the segment on time. 
