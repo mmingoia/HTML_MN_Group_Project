@@ -3,6 +3,8 @@ UT DA HTML_ML_Group_Project
 
 NataliaKuznetsova:
 
+## SEGMENT 1
+
 1.	I’ve created S3 bucket with public access and saved one file with data – 
 “epi indicators-all years.csv”
 https://s3.console.aws.amazon.com/s3/buckets/ivote/?region=us-east-2&tab=overview
@@ -17,6 +19,23 @@ https://s3.console.aws.amazon.com/s3/buckets/ivote/?region=us-east-2&tab=overvie
     "state indicators 2018.csv"
     "TexasPopulation2016_alldata.csv"
     "EAVS 2016 Final Data for Public Release v.3.csv"
+    
+## SEGMENT 2    
+    
+1. With SQLAlchemy module I've created database engine and was able to access PostgreSQL data using read_sql(). File election.ipynb
+
+2. Apllied Multiple Linear Regression Model and Random Forest Regressor to two datasets that contains 150 rows and 306 rows (only with EPI indicators). Calculated accuracy, reviewed outcome.
+
+3. In order to increase dataset by including mid-term elections of 2010, 2014, 2018, I've found raw data and calculated the parameters.
+- Republican-Democrats competitiveness.
+ https://www.fec.gov/introduction-campaign-finance/election-and-voting-information/
+ - Demographic data for  years (Table 4b):
+  www.census.gov
+  
+Files "tables10 mod.xlsx", "tables2014 mod.xls" and "federalelections2018 mod.xlsx" are related to Competitiveness. Refer to "Table 2. GE votes by party" tab.
+Files "table04b_2010 mod.xlsx", "table04b 2014 mod.xlsx", "table04b 2018 mod.xlsx" reflect demographic data, refer to Summary tab, columns J to P.
+
+ 4. Prepared slide 7 on the google-slide Presentation.
 
 References:
 1)	Replication Data for the Elections Performance Index and supporting files
