@@ -58,15 +58,14 @@ CREATE TABLE VotingLawsData (
 	uocava_nonret NUMERIC,
 	eavs_completeness NUMERIC,
 	post_election_audit INTEGER,
-	nonvoter_illness_onyear_pct NUMERIC,
-	nonvoter_illness_offyear_pct NUMERIC,
-	nonvoter_reg_onyear_pct NUMERIC,
-	nonvoter_reg_offyear_pct NUMERIC,
+	nonvoter_illness_pct NUMERIC,
+	nonvoter_reg_pct NUMERIC,
 	online_reg INTEGER,
 	wait NUMERIC,
 	residual NUMERIC,
 	pct_reg_of_vep_vrs NUMERIC,
-	vep_turnout NUMERIC
+	vep_turnout NUMERIC,
+	midterm INTEGER
 );
 
 SELECT * FROM VotingLawsData;
@@ -177,12 +176,13 @@ SELECT
 	vld.uocava_nonret,
 	vld.eavs_completeness,
 	vld.post_election_audit,
-	vld.nonvoter_illness_onyear_pct,
-	vld.nonvoter_reg_onyear_pct,
+	vld.nonvoter_illness_pct,
+	vld.nonvoter_reg_pct,
 	vld.online_reg,
 	vld.wait,
 	vld.residual,
 	vld.pct_reg_of_vep_vrs,
+	vld.midterm,
 	demo.PercentCitizenWhite,
 	demo.PercentCitizenBlack,
 	demo.PercentCitizenAsian,
