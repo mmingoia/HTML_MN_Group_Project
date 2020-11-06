@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Turnout Dashboard!</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-2">
+        <div class="well">
+            <h1>Welcome to our Voter Turnout Dashboard!</h1>
+            <!-- <select id="selDataset"></select> -->
+            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Election year</h3>
+            </div>
+            <div id="year-metadata" class="panel-body"></div>
+        </div>
+        </div>
+        <div class="col-md-5">
+            <div id="bar-plot"></div>
+</body>
+</html>
