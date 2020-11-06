@@ -1,2 +1,2 @@
-web: gunicorn voterturnout.wsgi --log-file -
+web: gunicorn html-mn-dashboard:app --log-file -
    
