@@ -9,6 +9,8 @@ from sqlalchemy import create_engine, func
 from flask import Flask, jsonify
 from flask import Flask, render_template
 import psycopg2
+from bokeh.models import ColumnDataSource
+from bokeh.plotting import figure, output_file, show
 
 t_host = "provisionaldb2.cpvxmi357s0k.us-east-2.rds.amazonaws.com" # either "localhost", a domain name, or an IP address.
 t_port = "5432" # default postgres port
@@ -55,8 +57,9 @@ def homepage():
 
 @app.route("/GeneralTurnout")
 def turnout():
-    return render_template ("turnout.html")
 
+
+    return render_template ("turnout.html")
 
 @app.route("/Nonvoters")
 #----- Route will return the webpage with reasons why people don't turn out: visualizations
@@ -77,3 +80,5 @@ def visualize3():
 
 if __name__ == "__main__":
     app.run()
+
+# %%
