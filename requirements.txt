@@ -6,3 +6,4 @@ sqlalchemy
 pandas
 numpy
 datetime
+voterturnoutdashboard
