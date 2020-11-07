@@ -1,3 +1,4 @@
+#%%
 import datetime as dt
 import numpy as np
 import pandas as pd
@@ -9,8 +10,6 @@ from flask import Flask, jsonify
 from flask import Flask, render_template
 import psycopg2
 
-
-
 t_host = "provisionaldb2.cpvxmi357s0k.us-east-2.rds.amazonaws.com" # either "localhost", a domain name, or an IP address.
 t_port = "5432" # default postgres port
 t_dbname = "GroupProjectDB"
@@ -19,9 +18,12 @@ t_pw = "postgres"
 db_conn = psycopg2.connect(host=t_host, port=t_port, dbname=t_dbname, user=t_user, password=t_pw)
 db_cursor = db_conn.cursor()
 
-
 # Read data from PostgreSQL database table and load into a DataFrame instance
 DashboardDataDF =  pd.read_sql("select * from \"turnoutanalysisdata\"", db_conn)
+PercentRegisteredData =  [DashboardDataDF["electionyear"],DashboardDataDF["stateabbreviation"], DashboardDataDF["statename"] , DashboardDataDF["pct_reg_of_vep_vrs"]]
+PercentRegisteredHeaders = ["ElectionYear","StateAbbreviation","StateName","PercentOfRegisteredVoters" ]
+PercentRegisteredDF = pd.concat(PercentRegisteredData, axis=1, keys=PercentRegisteredHeaders)
+
 
 
 # ***** NEED TO FIGURE OUT CONNECTING TO OUR DATABASE HERE ******
