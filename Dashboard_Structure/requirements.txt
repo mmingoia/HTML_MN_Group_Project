@@ -1,0 +1,8 @@
+django
+gunicorn
+django-heroku
+Flask
+sqlalchemy
+pandas
+numpy
+datetime
