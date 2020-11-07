@@ -1,2 +1,2 @@
-web: gunicorn html-mn-dashboard:app --log-file -
+web: gunicorn voterturnoutdashboard:app --log-file -
    
