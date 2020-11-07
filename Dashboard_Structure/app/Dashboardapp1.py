@@ -77,7 +77,7 @@ def visualize2():
 def visualize3():
     return ("DOES THIS PAGE WORK?")
 
-if __name__ == "__main__":
-    app.run()
+# if __name__ == "__main__":
+#     app.run()
 
 # %%
