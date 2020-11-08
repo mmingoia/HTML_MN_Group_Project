@@ -12,17 +12,20 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import psycopg2
 import joblib
-from .models import db
 
 
+# ***** CONNECTING TO OUR DATABASE ******
 
-# t_host = "provisionaldb2.cpvxmi357s0k.us-east-2.rds.amazonaws.com" # either "localhost", a domain name, or an IP address.
-# t_port = "5432" # default postgres port
-# t_dbname = "GroupProjectDB"
-# t_user = "postgres"
-# t_pw = "postgres"
-# db_conn = psycopg2.connect(host=t_host, port=t_port, dbname=t_dbname, user=t_user, password=t_pw)
-# db_cursor = db_conn.cursor()
+
+t_host = "provisionaldb2.cpvxmi357s0k.us-east-2.rds.amazonaws.com" # either "localhost", a domain name, or an IP address.
+t_port = "5432" # default postgres port
+t_dbname = "GroupProjectDB"
+t_user = "postgres"
+t_pw = "postgres"
+db_conn = psycopg2.connect(host=t_host, port=t_port, dbname=t_dbname, user=t_user, password=t_pw)
+db_cursor = db_conn.cursor()
+
+
 
 # #Read data from PostgreSQL database table and load into a DataFrame instance
 # DashboardDataDF =  pd.read_sql_query("select * from \"turnoutanalysisdata\"", db_conn)
@@ -30,35 +33,20 @@ from .models import db
 # PercentRegisteredHeaders = ["ElectionYear","StateAbbreviation","StateName","PercentOfRegisteredVoters" ]
 # PercentRegisteredDF = pd.concat(PercentRegisteredData, axis=1, keys=PercentRegisteredHeaders)
 
-
-
-# ***** NEED TO FIGURE OUT CONNECTING TO OUR DATABASE HERE ******
-
-#engine = create_engine("sqlite:///hawaii.sqlite")
-
-#Base = automap_base()
-
-#Base.prepare(engine, reflect=True)
-
-#Measurement = Base.classes.measurement
-#Station = Base.classes.station 
-
-#session = Session(engine)
-
 #**********************************************
 #%%
 app = Flask(__name__)
 
-POSTGRES = {
-    'user' : 'postgres',
-    'pw' : 'postgres',
-    'db' : 'GroupProjectDB',
-    'host' : 'provisionaldb2.cpvxmi357s0k.us-east-2.rds.amazonaws.com',
-    'port' : '5432'
-}
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:\
-%(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
-db.init_app(app)
+# POSTGRES = {
+#     'user' : 'postgres',
+#     'pw' : 'postgres',
+#     'db' : 'GroupProjectDB',
+#     'host' : 'provisionaldb2.cpvxmi357s0k.us-east-2.rds.amazonaws.com',
+#     'port' : '5432'
+# }
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:\
+# %(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
+# db.init_app(app)
 #----------------------
 # Creating the routes
 
@@ -86,12 +74,13 @@ def visualize2():
     return render_template("Competitiveness.html")
 
 
-@app.route("/PredictTurnout", methods=['POST'])
+@app.route("/PredictTurnout", methods=['POST', 'GET'])
 #****** FIGURE OUT CONNECTING TO OUR MACHINE LEARNING MODEL HERE**********
 def prediction():
-    json = request.get_json()
+    # json = request.get_json()
     rfr_model = joblib.load('MachineLearningModels/rfr_model.pkl')
-    df = pd.DataFrame(json, index=[0])
+    DashboardDataDF =  pd.read_sql_query("select * from \"turnoutanalysisdata\"", db_conn)
+    df = pd.DataFrame(DashboardDataDF, index=[0])
 
     from sklearn.preprocessing import StandardScaler
     scaler = StandardScaler()
@@ -103,12 +92,11 @@ def prediction():
     y_predict = rfr_model.predict(df_x_scaled)
 
     result = {"Predicted Voter Turnout" : y_predict[0]}
+    jsonify(result)
 
-    return jsonify(result)
-        # return ('CHEERS')
+    return render_template('result.html')
 
 if __name__ == "__main__":
-    app.debug=True
     app.run()
 
 # %%
