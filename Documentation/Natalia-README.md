@@ -37,6 +37,20 @@ Files "table04b_2010 mod.xlsx", "table04b 2014 mod.xlsx", "table04b 2018 mod.xls
 
  4. Prepared slide 7 on the google-slide Presentation.
 
+
+## SEGMENT 3   
+
+1. Created ML-Model branch. Updated the Code, file election.ipynb, since we included datasets for three more years (midterm elections).
+
+2. Compared two models - Linear Regression and Random Forest Models.
+
+3. Based on the analysis using Random Forest, determined five most impoirtant features, generated a new file with possible combination of these features (simulation.csv).
+   Firstly I created an Excel file with five top feautures: midterm_s - 2 possible values, "pct_reg_of_vep_vrs_s" - 5 values, "percentcitizenblack_s" -6 values, "percentcitizenwhite_s" - 6 values, "nonvoter_reg_pct_s" - 14 values. So the entire new dataset with simulated data contains 5040 rows. (2*5*6*6*14= 5040). Using this new dataset I did run Random Forest Model and generated predicted turnout. Uploaded the dataframe to our sql database, creating new table named turnout_pred.
+
+4. Created slides 8 and 9 "Analysis phase of the project".
+
+
+
 References:
 1)	Replication Data for the Elections Performance Index and supporting files
 https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/9UF1ZM
