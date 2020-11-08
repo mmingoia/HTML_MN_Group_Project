@@ -6,7 +6,7 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -74,27 +74,11 @@ def visualize2():
     return render_template("Competitiveness.html")
 
 
-@app.route("/PredictTurnout", methods=['POST', 'GET'])
+@app.route("/PredictTurnout", methods=['GET'])
 #****** FIGURE OUT CONNECTING TO OUR MACHINE LEARNING MODEL HERE**********
 def prediction():
-    # json = request.get_json()
-    rfr_model = joblib.load('MachineLearningModels/rfr_model.pkl')
-    DashboardDataDF =  pd.read_sql_query("select * from \"turnoutanalysisdata\"", db_conn)
-    df = pd.DataFrame(DashboardDataDF, index=[0])
- 
-    from sklearn.preprocessing import StandardScaler
-    scaler = StandardScaler()
-    scaler.fit(Dataframe)
-
-    df_x_scaled = scaler.transform(Dataframe)
-
-    df_x_scaled = pd.DataFrame(df_x_scaled, columns=df.columns)
-    y_predict = rfr_model.predict(df_x_scaled)
-
-    result = {"Predicted Voter Turnout" : y_predict[0]}
-    jsonify(result)
-
-    return render_template('result.html')
+    
+    return render_template('model.html')
 
 if __name__ == "__main__":
     app.run()
