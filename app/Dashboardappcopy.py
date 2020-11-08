@@ -81,7 +81,7 @@ def prediction():
     rfr_model = joblib.load('MachineLearningModels/rfr_model.pkl')
     DashboardDataDF =  pd.read_sql_query("select * from \"turnoutanalysisdata\"", db_conn)
     df = pd.DataFrame(DashboardDataDF, index=[0])
-
+ 
     from sklearn.preprocessing import StandardScaler
     scaler = StandardScaler()
     scaler.fit(Dataframe)
