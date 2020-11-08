@@ -6,7 +6,7 @@ UT DA HTML_ML_Group_Project
 
 The reasons our team chose the topic of “Vote Turnout Analysis” was because we think this is something interesting concerning the USA elections. When discussing this topic with the team we asked ourselves how high the voter Turnout in the elections is and why has this number not been able to change in a long time. Knowing that the US has had a 45% voter Turnout, we decided to analyze different areas of this data to find out why this is a problem.  
 
-![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/LuisBranch10-29-2020/Images/election-day-1440x550.png)
+![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/election-day-1440x550.png)
 
 ## Questions?
 
@@ -32,7 +32,7 @@ Our primary data sources are a combination of government data and privately fund
 ## Communication Protocols:
 We as a group will communicate though our Slack Channel, during class and after class hours. During our time we will discuss the outline, tasks for each member, and assistance as needed to complete the segment on time.
 
-![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/LuisBranch10-29-2020/Images/download.png).  ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/LuisBranch10-29-2020/Images/download-1.jpg). ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/LuisBranch10-29-2020/Images/download.jpg)
+![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download.png).  ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download.jpg). ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download-1.jpg)
 
 ## Link to Google Slides Presentation
 
