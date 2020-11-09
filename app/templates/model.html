@@ -6,10 +6,12 @@
     <title>Voter Turnout Predictor</title>
 </head>
 <body> 
-	<h3>Voter Turnout Model</h3> 
+    <h3>Voter Turnout Model</h3> 
+    <h5>Select percentages for each category to submit and receive a predicted voter turnout percentage.</h5>
 <div> 
+    <form action="/PredictTurnout" method="POST">
         <label for="pct_reg_of_vep_vrs_s">Percent of Registered Eligible Voters</label> 
-        <select id="pct_reg_of_vep_vrs_s" name="pct_reg_of_vep_vrs_s"> 
+        <select id="reg_vep" name="reg_vep"> 
             <option value="0">     </option>
             <option value="1"> .70 </option> 
             <option value="2"> .75 </option> 
@@ -19,14 +21,14 @@
         </select> 
         <br> 
         <label for="midterm_s">Type of Election</label> 
-        <select id="midterm_s" name="midterm_s"> 
+        <select id="midterm" name="midterm"> 
             <option value="0">   </option>
             <option value="1"> 0 </option> 
             <option value="2"> 1 </option> 
-        </select> 
+        </select> (Presidential = 0, Midterm = 1)
         <br> 
         <label for="percentcitizenblack_s">Percent Black Population</label> 
-        <select id="percentcitizenblack_s" name="percentcitizenblack_s"> 
+        <select id="black" name="black"> 
             <option value="0">     </option>
             <option value="1"> .03 </option> 
             <option value="2"> .07 </option> 
@@ -37,7 +39,7 @@
         </select> 
         <br> 
         <label for="percentcitizenwhite_s">Percent White Population</label> 
-        <select id="percentcitizenwhite_s" name="percentcitizenwhite_s"> 
+        <select id="white" name="white"> 
             <option value="0">     </option>
             <option value="1"> .50 </option> 
             <option value="2"> .60 </option> 
@@ -48,7 +50,7 @@
         </select> 
         <br> 
         <label for="nonvoter_reg_pct_s">Nonvoter</label> 
-        <select id="nonvoter_reg_pct_s" name="nonvoter_reg_pct_s"> 
+        <select id="nonvoter" name="nonvoter"> 
             <option value="0">     </option>
             <option value="1"> .01 </option>
             <option value="2"> .02 </option>
@@ -66,10 +68,13 @@
             <option value="14"> .14 </option> 
         </select> 
         <br> 
-        <input type="submit" value="Submit"> 
+        <input type="submit" id ="button" value="Submit"> 
     </form> 
+    <h4>Voter Turnout prediction percentage based on category selection</h4>
+    <h1> {{prediction}} % </h1>
 
     <a href="http://127.0.0.1:5000"> Return Home </a> 
+
 </div> 
 </body> 
 </html> 
