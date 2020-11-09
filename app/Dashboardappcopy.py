@@ -58,13 +58,11 @@ def index():
         return render_template ("index.html") 
 #-------Route will return the webpage with turnout based on voter demographics: visualizations
 
-<<<<<<< Updated upstream
+
 @app.route("/GeneralTurnout")
 def turnout():
     return render_template ("turnout.html")
-=======
 
->>>>>>> Stashed changes
 
 @app.route("/Nonvoters")
 #----- Route will return the webpage with reasons why people don't turn out: visualizations
@@ -91,31 +89,28 @@ input_cols = ['reg_vep', 'midterm', 'black', 'white', 'nonvoter']
 # # prediction function 
 def ValuePredictor(user_input): 
     y_predict = np.array(user_input).reshape(1,5)
-<<<<<<< Updated upstream
     loaded_model = joblib.load("rf_model.pkl")
     result = loaded_model.predict(y_predict) 
-    return result
-=======
-    loaded_model = joblib.load("rfr_model1.pkl")
-    result = loaded_model.predict(y_predict) 
-    return result[0] 
->>>>>>> Stashed changes
+    return result[0]
 
 
 @app.route('/PredictTurnout', methods = ['GET','POST']) 
 def result():  
     if request.method == 'POST': 
         user_input = request.form.to_dict() 
+        # print(user_input)
+        # user_input = user_input.values()
         user_input = list(user_input.values()) 
+        user_input = list(map(int, user_input)) 
         result = ValuePredictor(user_input)         
-        if int(result) > 0: 
-            prediction ='Income more than 50K'
-        else: 
-            prediction ='Income less that 50K'            
-        return render_template("result.html", prediction = prediction) 
-        # return render_template('model.html')
+        if result > 0: 
+            prediction = round(result * 100)
+        # else: 
+        #     prediction ='Income less that 50K'            
+        return render_template("model.html", prediction = prediction) 
+    return render_template('model.html')
 
-
+ 
     # if request.method == 'POST': 
     #     submit = request.form['button']
     #     # registered_voters = request.form['reg_vep']
