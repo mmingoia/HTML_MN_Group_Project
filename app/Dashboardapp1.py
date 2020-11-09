@@ -6,11 +6,10 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
-#%%
 from flask import Flask, jsonify
-#%%
 from flask import Flask, render_template
 import psycopg2
+import joblib
 
 # t_host = "provisionaldb2.cpvxmi357s0k.us-east-2.rds.amazonaws.com" # either "localhost", a domain name, or an IP address.
 # t_port = "5432" # default postgres port
@@ -74,8 +73,23 @@ def visualize2():
 
 @app.route("/PredictTurnout")
 #****** FIGURE OUT CONNECTING TO OUR MACHINE LEARNING MODEL HERE**********
-def visualize3():
-    return ("DOES THIS PAGE WORK?")
+def prediction():
+    # json = request.get_json()
+    rfr_model = joblib.load('MachineLearningModels/rfr_model.pkl')
+    # read in dataframe e.g. df = pd.Dataframe(json, index=[0])
+
+    from sklearn.preprocessing import StandardScaler
+    scaler = StandardScaler()
+    scaler.fit(dataframe)
+
+    df_x_scaled = scaler.transform(dataframe)
+
+    df_x_scaled = pd.DataFrame(df_x_scaled, columns=df.columns)
+    y_predict = rfr_model.predict(df_x_scaled)
+
+    result = {"Predicted Voter Turnout" : y_predict[0]}
+
+    return jsonify(result)
 
 if __name__ == "__main__":
     app.run()

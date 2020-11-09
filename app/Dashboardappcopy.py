@@ -12,6 +12,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import psycopg2
 import joblib
+import pickle
+from pickle import load 
 
 
 # ***** CONNECTING TO OUR DATABASE ******
@@ -56,11 +58,9 @@ def index():
         return render_template ("index.html") 
 #-------Route will return the webpage with turnout based on voter demographics: visualizations
 
-
 @app.route("/GeneralTurnout")
 def turnout():
     return render_template ("turnout.html")
-
 
 @app.route("/Nonvoters")
 #----- Route will return the webpage with reasons why people don't turn out: visualizations
@@ -74,11 +74,50 @@ def visualize2():
     return render_template("Competitiveness.html")
 
 
-@app.route("/PredictTurnout", methods=['GET'])
-#****** FIGURE OUT CONNECTING TO OUR MACHINE LEARNING MODEL HERE**********
-def prediction():
+
+# #****** FIGURE OUT CONNECTING TO OUR MACHINE LEARNING MODEL HERE**********
+# def prediction():
+
+# @app.route('/PredictTurnout')
+# def blankform():
+#     return render_template('model.html')
+
+input_cols = ['reg_vep', 'midterm', 'black', 'white', 'nonvoter']
+
+# # prediction function 
+def ValuePredictor(user_input): 
+    y_predict = np.array(user_input).reshape(1,5)
+    loaded_model = joblib.load("rf_model.pkl")
+    result = loaded_model.predict(y_predict) 
+    return result
+
+
+@app.route('/PredictTurnout', methods = ['GET','POST']) 
+def result():  
+    if request.method == 'POST': 
+        user_input = request.form.to_dict() 
+        user_input = list(user_input.values()) 
+        result = ValuePredictor(user_input)         
+        if int(result) > 0: 
+            prediction ='Income more than 50K'
+        else: 
+            prediction ='Income less that 50K'            
+        return render_template("result.html", prediction = prediction) 
+        # return render_template('model.html')
+
+
+    # if request.method == 'POST': 
+    #     submit = request.form['button']
+    #     # registered_voters = request.form['reg_vep']
     
-    return render_template('model.html')
+    #     user_input = request.form.to_dict() 
+    #     # to_predict_list = pd.DataFrame(to_predict_list)
+    #     # to_predict_list = list(to_predict_list.values()) 
+    #     # to_predict_list = list(map(int, to_predict_list)) 
+    #     result = ValuePredictor(Form)         
+    #     if int(result) > 0: 
+    #         prediction = '{result * 100 } % percent likely to vote'            
+    #     return render_template("model.html", prediction = prediction)     
 
 if __name__ == "__main__":
     app.run()
