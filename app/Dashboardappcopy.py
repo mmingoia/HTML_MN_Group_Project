@@ -58,9 +58,13 @@ def index():
         return render_template ("index.html") 
 #-------Route will return the webpage with turnout based on voter demographics: visualizations
 
+<<<<<<< Updated upstream
 @app.route("/GeneralTurnout")
 def turnout():
     return render_template ("turnout.html")
+=======
+
+>>>>>>> Stashed changes
 
 @app.route("/Nonvoters")
 #----- Route will return the webpage with reasons why people don't turn out: visualizations
@@ -87,9 +91,15 @@ input_cols = ['reg_vep', 'midterm', 'black', 'white', 'nonvoter']
 # # prediction function 
 def ValuePredictor(user_input): 
     y_predict = np.array(user_input).reshape(1,5)
+<<<<<<< Updated upstream
     loaded_model = joblib.load("rf_model.pkl")
     result = loaded_model.predict(y_predict) 
     return result
+=======
+    loaded_model = joblib.load("rfr_model1.pkl")
+    result = loaded_model.predict(y_predict) 
+    return result[0] 
+>>>>>>> Stashed changes
 
 
 @app.route('/PredictTurnout', methods = ['GET','POST']) 
