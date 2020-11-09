@@ -76,14 +76,26 @@ def visualize2():
     return render_template("Competitiveness.html")
 
 
+<<<<<<< Updated upstream
 # Function to utilize saved RandomForestModel
 def ValuePredictor(user_input): 
     y_predict = np.array(user_input).reshape(1,5)
     loaded_model = joblib.load("rf_model.pkl")
     result = loaded_model.predict(y_predict) 
     return result[0]
+=======
+<<<<<<< HEAD
+@app.route("/PredictTurnout", methods=['POST', 'GET'])
+#****** FIGURE OUT CONNECTING TO OUR MACHINE LEARNING MODEL HERE**********
+def prediction():
+    # json = request.get_json()
+    rfr_model = joblib.load('MachineLearningModels/rfr_model.pkl')
+    DashboardDataDF =  pd.read_sql_query("select * from \"turnoutanalysisdata\"", db_conn)
+    df = pd.DataFrame(DashboardDataDF, index=[0])
+>>>>>>> Stashed changes
 
 
+<<<<<<< Updated upstream
 @app.route('/PredictTurnout', methods = ['GET','POST']) 
 def result():  
     if request.method == 'POST': 
@@ -96,6 +108,24 @@ def result():
         return render_template("model.html", prediction = prediction) 
     return render_template('model.html')
  
+=======
+    df_x_scaled = scaler.transform(Dataframe)
+
+    df_x_scaled = pd.DataFrame(df_x_scaled, columns=df.columns)
+    y_predict = rfr_model.predict(df_x_scaled)
+
+    result = {"Predicted Voter Turnout" : y_predict[0]}
+    jsonify(result)
+
+    return render_template('result.html')
+=======
+@app.route("/PredictTurnout", methods=['GET'])
+#****** FIGURE OUT CONNECTING TO OUR MACHINE LEARNING MODEL HERE**********
+def prediction():
+    
+    return render_template('model.html')
+>>>>>>> c3c18bb7a27969642235a44527ddf2b2dac0f179
+>>>>>>> Stashed changes
 
 if __name__ == "__main__":
     app.run()
