@@ -72,12 +72,26 @@ def visualize2():
     return render_template("Competitiveness.html")
 
 
-@app.route("/PredictTurnout")
-#****** FIGURE OUT CONNECTING TO OUR MACHINE LEARNING MODEL HERE**********
-def visualize3():
-    return ("DOES THIS PAGE WORK?")
 
+# Function to utilize saved RandomForestModel
+def ValuePredictor(user_input): 
+    y_predict = np.array(user_input).reshape(1,5)
+    loaded_model = joblib.load("rf_model.pkl")
+    result = loaded_model.predict(y_predict) 
+    return result[0]
+
+@app.route('/PredictTurnout', methods = ['GET','POST']) 
+def result():  
+    if request.method == 'POST': 
+        user_input = request.form.to_dict() 
+        user_input = list(user_input.values()) 
+        user_input = list(map(int, user_input)) 
+        result = ValuePredictor(user_input)         
+        if result > 0: 
+            prediction = round(result * 100, 2)            
+        return render_template("model.html", prediction = prediction) 
+    return render_template('model.html')
+
+    
 if __name__ == "__main__":
     app.run()
-
-# %%
