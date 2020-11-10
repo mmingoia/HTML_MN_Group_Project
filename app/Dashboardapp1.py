@@ -42,7 +42,7 @@ def visualize2():
 # Function to utilize saved RandomForestModel 
 def ValuePredictor(user_input): 
     y_predict = np.array(user_input).reshape(1,5)
-    loaded_model = joblib.load("static/rf_model.pkl")
+    loaded_model = joblib.load("app/model/rf_model.pkl")
     result = loaded_model.predict(y_predict) 
     return result[0]
     
