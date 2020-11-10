@@ -57,7 +57,7 @@ def index():
 
 @app.route("/GeneralTurnout")
 def turnout():
-    return render_template ("turnout.html")
+    return render_template ("generalTurnout.html")
 
 
 @app.route("/Nonvoters")
