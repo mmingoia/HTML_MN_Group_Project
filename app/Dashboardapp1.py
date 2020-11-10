@@ -1,54 +1,19 @@
 #%%
-import datetime as dt
+#Import Dependencies
 import numpy as np
 import pandas as pd
-import sqlalchemy
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func
-#%%
-from flask import Flask, jsonify
-#%%
 from flask import Flask, render_template
-import psycopg2
-
-# t_host = "provisionaldb2.cpvxmi357s0k.us-east-2.rds.amazonaws.com" # either "localhost", a domain name, or an IP address.
-# t_port = "5432" # default postgres port
-# t_dbname = "GroupProjectDB"
-# t_user = "postgres"
-# t_pw = "postgres"
-# db_conn = psycopg2.connect(host=t_host, port=t_port, dbname=t_dbname, user=t_user, password=t_pw)
-# db_cursor = db_conn.cursor()
-
-# Read data from PostgreSQL database table and load into a DataFrame instance
-# DashboardDataDF =  pd.read_sql("select * from \"turnoutanalysisdata\"", db_conn)
-# PercentRegisteredData =  [DashboardDataDF["electionyear"],DashboardDataDF["stateabbreviation"], DashboardDataDF["statename"] , DashboardDataDF["pct_reg_of_vep_vrs"]]
-# PercentRegisteredHeaders = ["ElectionYear","StateAbbreviation","StateName","PercentOfRegisteredVoters" ]
-# PercentRegisteredDF = pd.concat(PercentRegisteredData, axis=1, keys=PercentRegisteredHeaders)
-
-
-
-# ***** NEED TO FIGURE OUT CONNECTING TO OUR DATABASE HERE ******
-
-#engine = create_engine("sqlite:///hawaii.sqlite")
-
-#Base = automap_base()
-
-#Base.prepare(engine, reflect=True)
-
-#Measurement = Base.classes.measurement
-#Station = Base.classes.station 
-
-#session = Session(engine)
+import joblib
 
 #**********************************************
 #%%
+
 app = Flask(__name__)
 
-#----------------------
-# Creating the routes
 
-## < NEED TO EDIT THE ROUTES TO REFLECT THE DIFFERENT PAGES WE WILL HAVE > 
+# Create the routes
+
+## <ROUTES REFLECTING DIFFERENT WEBPAGES> 
 @app.route("/")
 def index():
         return render_template ("index.html") 
@@ -73,13 +38,14 @@ def visualize2():
 
 
 
-# Function to utilize saved RandomForestModel
+# Function to utilize saved RandomForestModel 
 def ValuePredictor(user_input): 
     y_predict = np.array(user_input).reshape(1,5)
     loaded_model = joblib.load("rf_model.pkl")
     result = loaded_model.predict(y_predict) 
     return result[0]
-
+    
+# Route to collect input data from user form to call model function and render prediction
 @app.route('/PredictTurnout', methods = ['GET','POST']) 
 def result():  
     if request.method == 'POST': 
@@ -92,6 +58,6 @@ def result():
         return render_template("model.html", prediction = prediction) 
     return render_template('model.html')
 
-    
+
 if __name__ == "__main__":
     app.run()
