@@ -28,13 +28,13 @@ def turnout():
 @app.route("/Nonvoters")
 #----- Route will return the webpage with reasons why people don't turn out: visualizations
 def visualize():
-    return render_template ("nonvoters.html")
+    return render_template ("Nonvoters.html")
 
 
 @app.route("/Competitiveness")
 #---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
 def visualize2():
-    return render_template("Competitiveness.html")
+    return render_template("competitiveness.html")
 
 
 
