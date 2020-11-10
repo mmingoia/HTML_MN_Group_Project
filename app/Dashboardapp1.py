@@ -2,7 +2,8 @@
 #Import Dependencies
 import numpy as np
 import pandas as pd
-from flask import Flask, render_template, request
+from flask import Flask, render_template
+from flask import Flask, request
 import joblib
 
 #**********************************************
@@ -57,7 +58,7 @@ def result():
             prediction = round(result * 100, 2)            
         return render_template("model.html", prediction = prediction) 
     return render_template('model.html')
-
+ 
 
 if __name__ == "__main__":
     app.run()
