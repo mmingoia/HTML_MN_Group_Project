@@ -2,7 +2,7 @@
 #Import Dependencies
 import numpy as np
 import pandas as pd
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import joblib
 
 #**********************************************
