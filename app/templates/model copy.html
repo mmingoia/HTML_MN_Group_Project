@@ -6,8 +6,10 @@
     <title>Voter Turnout Predictor</title>
 </head>
 <body> 
-    <h3>Voter Turnout Model</h3> 
-    <h5>Select percentages for each category to submit and receive a predicted voter turnout percentage.</h5>
+    <h2>Voter Turnout Model
+    <h4>Top five factors: <br>related to total voter turnout in the United States.</h4>
+    </h2> 
+    <h5>Select values for each category to <br> predict voter turnout percentage.</h5>
 <div> 
     <form action="/PredictTurnout" method="POST">
         <label for="pct_reg_of_vep_vrs_s">Percent of Registered Eligible Voters</label> 
@@ -70,10 +72,12 @@
         <br> 
         <input type="submit" id ="button" value="Submit"> 
     </form> 
-    <h4>Voter Turnout prediction percentage based on category selection</h4>
-    <h1> {{prediction}} % </h1>
+    <h1> {{prediction}} % Voter Turnout
+        <h4>Prediction based on top five feature selection and weighted percentages</h4>
+    </h1> 
 
-    <a href="http://127.0.0.1:5000"> Return Home </a> 
+    <!--<a href="http://127.0.0.1:5000"> Return Home </a> -->
+        <a href="https://voterturnoutdashboard.herokuapp.com/"> Return Home </a>
 
 </div> 
 </body> 
