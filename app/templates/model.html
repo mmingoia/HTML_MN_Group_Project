@@ -13,7 +13,7 @@
 <div> 
     <form action="/PredictTurnout" method="POST">
         <label for="pct_reg_of_vep_vrs_s">Percent of Registered Eligible Voters</label> 
-        <select id="2eg_vep" name="2reg_vep"> 
+        <select id="2reg_vep" name="2reg_vep"> 
             <option value=".70"> .70 </option> 
             <option value=".75"> .75 </option> 
             <option value=".80"> .80 </option> 
@@ -71,9 +71,28 @@
         <h4>Prediction based on top five feature selection and weighted percentages</h4>
     </h1> 
 
-    <a href="http://127.0.0.1:5000"> Return Home </a>
-        <!-- <a href="https://voterturnoutdashboard.herokuapp.com/"> Return Home </a> -->
+<!-- 
+    <div id="hello"></div>
+    <script type ="text/javascript">
+        window.onload = function() {
+        what();
+        function what(){
+            // var myval = 'hello';
+            // localStorage.setItem('hello', 'hi');
+            // var myval = localStorage.getItem('myval');
+            document.getElementById('hello').innerHTML = sessionStorage.getItem('hi');
+        };
+    };
+   
+    </script> -->
+
+
+    <!-- <script src="http://127.0.0.1:5000/static/form.js"></script>  -->
+
+    <!-- <a href="http://127.0.0.1:5000"> Return Home </a> -->
+        <a href="https://voterturnoutdashboard.herokuapp.com/"> Return Home </a>
 
 </div> 
+    
 </body> 
 </html> 
