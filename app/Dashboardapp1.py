@@ -5,6 +5,8 @@ import pandas as pd
 from flask import Flask, render_template
 from flask import Flask, request
 import joblib
+import collections 
+from collections import OrderedDict
 
 #**********************************************
 #%%
@@ -42,7 +44,7 @@ def visualize2():
 # Function to utilize saved RandomForestModel 
 def ValuePredictor(user_input): 
     y_predict = np.array(user_input).reshape(1,5)
-    loaded_model = joblib.load("rf_model.pkl")
+    loaded_model = joblib.load("rf_simtest_model.pkl")
     result = loaded_model.predict(y_predict) 
     return result[0]
     
@@ -51,8 +53,10 @@ def ValuePredictor(user_input):
 def result():  
     if request.method == 'POST': 
         user_input = request.form.to_dict() 
+        user_input = OrderedDict(sorted(user_input.items(), key=lambda t: t[0]))
+        # return (user_input)
         user_input = list(user_input.values()) 
-        user_input = list(map(int, user_input)) 
+        user_input = list(map(float, user_input)) 
         result = ValuePredictor(user_input)         
         if result > 0: 
             prediction = round(result * 100, 2)            
