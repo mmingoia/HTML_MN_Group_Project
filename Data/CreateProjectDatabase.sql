@@ -203,11 +203,8 @@ CREATE TABLE nationalturnoutdata AS
 SELECT
 	td.electionyear,
 	td.HighestOffice,
-	td.VEP_VotingEligiblePopulation,
-	vld.midterm
-FROM TurnoutData as td
-INNER JOIN VotingLawsData as vld
-	ON td.yearstate = vld.yearstate;
+	td.VEP_VotingEligiblePopulation
+FROM TurnoutData as td;
 
 SELECT * FROM nationalturnoutdata;
 
