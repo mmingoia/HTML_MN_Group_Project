@@ -37,6 +37,12 @@ With this project we will be asking the following questions in the analysis:
 
 -Are the laws of each state affecting the voter turnout?
 
+## Reasons why we selected this topic:
+
+- When discussing this topic with the team we asked ourselves how high the voter Turnout in the elections is and why has this number not been able to change in a long time. 
+
+- Knowing that the US has had a 45.1% (2016) voter Turnout, we decided to analyze different areas of this data to find out why this is a problem.
+
 ## Source of data
 
 Our primary data sources are a combination of government data and privately funded studies:
