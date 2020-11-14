@@ -56,11 +56,6 @@ Our primary data sources are a combination of government data and privately fund
 -Voter Turnout Data
 
 
-## Communication Protocols:
-We as a group will communicate though our Slack Channel, during class and after class hours. During our time we will discuss the outline, tasks for each member, and assistance as needed to complete the segment on time.
-
-![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download.png).  ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download.jpg). ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download-1.jpg)
-
 ## Description of the Data exploration: 
 
 Data was formated from various sources to load into PostgreSQL (Hosted on Amazon RDS)
@@ -77,6 +72,13 @@ Data Tables Created in the Database
       Table consists of date from the 6 US elections from 2008-2018 (3 Presidential and 3 Midterms)
       
 # Phases of the Project: 
+
+We have analyzed the dataset that was formed by statistical data used for Elections Performance Index, competitiveness of elections and demographic data of voters for the past six Federal elections of the United States. 
+
+First, we considered a Linear Regression Model. However, we agreed a Random Forest Model would provide better accuracy score for the statistical analysis of voter turnout.
+
+We have sorted the most significant factors and evaluate those which might strongly skew the data, rerunning our model on a modified feature list as needed.
+
 
 ## Phase 1
  -This histogram illustrates the per State distribution of turnout rate in the past six elections - from 2008 to 2018.
@@ -133,6 +135,11 @@ We were able to determine top 5 factors for voter turnout:
 - How absentee ballots have impacted outcomes major elections. Effect of increased absentee ballots in 2020, will that increase stay, or drop in the future
 - How electoral college is in comparison to popular vote from other developed countries. 
 - Gather more data of voter trends 
+
+## Communication Protocols:
+We as a group will communicate though our Slack Channel, during class and after class hours. During our time we will discuss the outline, tasks for each member, and assistance as needed to complete the segment on time.
+
+![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download.png).  ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download.jpg). ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download-1.jpg)
     
 
 
