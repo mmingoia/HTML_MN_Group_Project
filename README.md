@@ -76,9 +76,9 @@ Data Tables Created in the Database
       Joined based on “Year-State”
       Table consists of date from the 6 US elections from 2008-2018 (3 Presidential and 3 Midterms)
       
-## Phases of the Project: 
+# Phases of the Project: 
 
-# Phase 1
+## Phase 1
  -This histogram illustrates the per State distribution of turnout rate in the past six elections - from 2008 to 2018.
  -The majority of states have approximately 0.6 turnout.
  -The turnout ranges from 0.28 to 0.78.
@@ -86,12 +86,12 @@ Data Tables Created in the Database
 
 ![Vote Turnout]()
 
-# Phase 2
+## Phase 2
 Random Forest analysis shows this prioritized list of features as the most important indicators of turnout. The number shows the importance of the feature
 
 ![Vote Turnout]()
 
-# Phase 3
+## Phase 3
 These scatterplots for five top features illustrate that application of Linear Regression Model would be less appropriate because there is no linear relationship between the parameters and the target variable.
 
 ![Vote Turnout]()
