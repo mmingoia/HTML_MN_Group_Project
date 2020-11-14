@@ -23,7 +23,7 @@ Link to the current google slides presentation - https://docs.google.com/present
 
 # Voter Turnout 
 
-The reasons our team chose the topic of “Vote Turnout Analysis” was because we think this is something interesting concerning the USA elections. When discussing this topic with the team we asked ourselves how high the voter Turnout in the elections is and why has this number not been able to change in a long time. Knowing that the US has had a 45% voter Turnout, we decided to analyze different areas of this data to find out why this is a problem.  
+The reasons our team chose the topic of “Vote Turnout Analysis” was because we think this is something interesting concerning the USA elections. When discussing this topic with the team we asked ourselves how high the voter Turnout in the elections is and why has this number not been able to change in a long time. Knowing that the US has had a 45.1% voter Turnout, we decided to analyze different areas of this data to find out why this is a problem.  
 
 ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/election-day-1440x550.png)
 
@@ -53,10 +53,41 @@ Our primary data sources are a combination of government data and privately fund
 
 -United States Elections Project
 
+-Voter Turnout Data
+
 
 ## Communication Protocols:
 We as a group will communicate though our Slack Channel, during class and after class hours. During our time we will discuss the outline, tasks for each member, and assistance as needed to complete the segment on time.
 
 ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download.png).  ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download.jpg). ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download-1.jpg)
+
+## Description of the Data exploration: 
+
+Data was formated from various sources to load into PostgreSQL (Hosted on Amazon RDS)
+
+Data Tables Created in the Database
+  - Turnout Data
+  - Competitiveness Data - Absolute Margin of Victory in each state for each election
+  - Voting laws Data
+  - Demographic Data - State by State demographic estimates for each election
+  - Reasons for Not Voting Data - Used in dashboard to show national summary of reasons for not voting
+  - Turnout Analysis Data 
+      Created from 25 Potential Features from Other Tables
+      Joined based on “Year-State”
+      Table consists of date from the 6 US elections from 2008-2018 (3 Presidential and 3 Midterms)
+      
+ 
+## Result of Analysis
+
+We were able to determine top 5 factors for voter turnout:
+1. Midterm vs. Presidential
+2. Registration 
+3. Percentage of African American voters 
+4. Percentage of White Voters 
+5. Percentage of non-voters due to registration problem
+
+       
+      
+
 
 
