@@ -84,12 +84,12 @@ Data Tables Created in the Database
  -The turnout ranges from 0.28 to 0.78.
  -Our analysis will show the importance of factors contributing to this wide range in turnout.
 
-![Vote Turnout]()
+![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/lrovira-patch-1/Images/ImagePhase1.PNG)
 
 ## Phase 2
 Random Forest analysis shows this prioritized list of features as the most important indicators of turnout. The number shows the importance of the feature
 
-![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/lrovira-patch-1/Images/ImagePhase1.PNG)
+![Vote Turnout]()
 
 ## Phase 3
 These scatterplots for five top features illustrate that application of Linear Regression Model would be less appropriate because there is no linear relationship between the parameters and the target variable.
