@@ -1,8 +1,12 @@
 
-# HTML_ML_Group_Project
-UT DA HTML_ML_Group_Project
+# Group Project
+
 ### Link to Voter Turnout Dashboard
 https://voterturnoutdashboard.herokuapp.com/
+
+### Link to Google Slides Presentation
+
+Link to the current google slides presentation - https://docs.google.com/presentation/d/1oixOSu95qCcIpbezFxn23Q6gKf3iapaZ3pV9jCNC29s/edit?usp=sharing
 
 ## Voter Turnout 
 
@@ -36,6 +40,4 @@ We as a group will communicate though our Slack Channel, during class and after 
 
 ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download.png).  ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download.jpg). ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/main/Images/download-1.jpg)
 
-## Link to Google Slides Presentation
 
-Link to the current google slides presentation - https://docs.google.com/presentation/d/1oixOSu95qCcIpbezFxn23Q6gKf3iapaZ3pV9jCNC29s/edit?usp=sharing
