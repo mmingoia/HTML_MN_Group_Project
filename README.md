@@ -76,6 +76,26 @@ Data Tables Created in the Database
       Joined based on “Year-State”
       Table consists of date from the 6 US elections from 2008-2018 (3 Presidential and 3 Midterms)
       
+## Phases of the Project: 
+
+# Phase 1
+ -This histogram illustrates the per State distribution of turnout rate in the past six elections - from 2008 to 2018.
+ -The majority of states have approximately 0.6 turnout.
+ -The turnout ranges from 0.28 to 0.78.
+ -Our analysis will show the importance of factors contributing to this wide range in turnout.
+
+![Vote Turnout]()
+
+# Phase 2
+Random Forest analysis shows this prioritized list of features as the most important indicators of turnout. The number shows the importance of the feature
+
+![Vote Turnout]()
+
+# Phase 3
+These scatterplots for five top features illustrate that application of Linear Regression Model would be less appropriate because there is no linear relationship between the parameters and the target variable.
+
+![Vote Turnout]()
+
 ## Technologies and Tools:
 
 -Dashboard
@@ -88,7 +108,7 @@ Data Tables Created in the Database
 -Machine Learning
   - Random Forest Model using Sklearn 
 
--HTM: Bootstrap & CSS
+-HTML: Bootstrap & CSS
 
 -Plotly
 
@@ -104,8 +124,14 @@ We were able to determine top 5 factors for voter turnout:
 4. Percentage of White Voters 
 5. Percentage of non-voters due to registration problem
 
-       
-      
+## Recommendation for future analysis 
+    
+- For our future election voters will gather data based on education and income. 
+Get historical voter data on from each state. 
+How absentee ballots have impacted outcomes major elections. Effect of increased absentee ballots in 2020, will that increase stay, or drop in the future
+How electoral college is in comparison to popular vote from other developed countries. 
+Gather more data of voter trends 
+    
 
 
 
