@@ -26,7 +26,7 @@ Our primary data sources are a combination of government data and privately fund
 
 -The United States Census Bureau
 
--Election Prediction Indicators from MIT
+-Election Prediction Indicators from MITfz 
 
 -United States Elections Project
 
