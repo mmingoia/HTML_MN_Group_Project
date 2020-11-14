@@ -8,6 +8,14 @@ https://voterturnoutdashboard.herokuapp.com/
 
 Link to the current google slides presentation - https://docs.google.com/presentation/d/1oixOSu95qCcIpbezFxn23Q6gKf3iapaZ3pV9jCNC29s/edit?usp=sharing
 
+### Team Members
+-Hannah Gonzalez
+-Luis Rovira
+-Mike Mingoia
+-Mohammad Minhas
+-Natalia Kuznetsova
+-Tim Smith 
+
 # Voter Turnout 
 
 The reasons our team chose the topic of “Vote Turnout Analysis” was because we think this is something interesting concerning the USA elections. When discussing this topic with the team we asked ourselves how high the voter Turnout in the elections is and why has this number not been able to change in a long time. Knowing that the US has had a 45% voter Turnout, we decided to analyze different areas of this data to find out why this is a problem.  
