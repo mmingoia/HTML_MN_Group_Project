@@ -96,7 +96,7 @@ These scatterplots for five top features illustrate that application of Linear R
 
 ![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/lrovira-patch-1/Images/ImagePhase3.PNG)
 
-![Vote Turnout]()
+![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/lrovira-patch-1/Images/ImagePhase%203-1.PNG)
 
 ## Technologies and Tools:
 
