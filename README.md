@@ -127,10 +127,10 @@ We were able to determine top 5 factors for voter turnout:
 ## Recommendation for future analysis 
     
 - For our future election voters will gather data based on education and income. 
-Get historical voter data on from each state. 
-How absentee ballots have impacted outcomes major elections. Effect of increased absentee ballots in 2020, will that increase stay, or drop in the future
-How electoral college is in comparison to popular vote from other developed countries. 
-Gather more data of voter trends 
+- Get historical voter data on from each state. 
+- How absentee ballots have impacted outcomes major elections. Effect of increased absentee ballots in 2020, will that increase stay, or drop in the future
+- How electoral college is in comparison to popular vote from other developed countries. 
+- Gather more data of voter trends 
     
 
 
