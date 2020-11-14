@@ -76,7 +76,20 @@ Data Tables Created in the Database
       Joined based on “Year-State”
       Table consists of date from the 6 US elections from 2008-2018 (3 Presidential and 3 Midterms)
       
- 
+## Technologies and Tools:
+
+-Dashboard
+  - Hosted on Heroku
+  - Flask app
+-Database
+  - PostgresSQL(Hosted on Amazon RDS)
+-Machine Learning
+  - Random Forest Model using Sklearn 
+-HTM: Bootstrap & CSS
+-Plotly
+-Python
+
+
 ## Result of Analysis
 
 We were able to determine top 5 factors for voter turnout:
