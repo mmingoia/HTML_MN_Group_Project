@@ -81,12 +81,17 @@ Data Tables Created in the Database
 -Dashboard
   - Hosted on Heroku
   - Flask app
+
 -Database
   - PostgresSQL(Hosted on Amazon RDS)
+
 -Machine Learning
   - Random Forest Model using Sklearn 
+
 -HTM: Bootstrap & CSS
+
 -Plotly
+
 -Python
 
 
