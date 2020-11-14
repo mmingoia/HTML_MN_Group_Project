@@ -10,10 +10,15 @@ Link to the current google slides presentation - https://docs.google.com/present
 
 ### Team Members
 -Hannah Gonzalez
+
 -Luis Rovira
+
 -Mike Mingoia
+
 -Mohammad Minhas
+
 -Natalia Kuznetsova
+
 -Tim Smith 
 
 # Voter Turnout 
