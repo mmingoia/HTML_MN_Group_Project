@@ -89,7 +89,7 @@ Data Tables Created in the Database
 ## Phase 2
 Random Forest analysis shows this prioritized list of features as the most important indicators of turnout. The number shows the importance of the feature
 
-![Vote Turnout]()
+![Vote Turnout](https://github.com/mmingoia/HTML_MN_Group_Project/blob/lrovira-patch-1/Images/ImagePhase2.PNG)
 
 ## Phase 3
 These scatterplots for five top features illustrate that application of Linear Regression Model would be less appropriate because there is no linear relationship between the parameters and the target variable.
