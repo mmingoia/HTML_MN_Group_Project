@@ -49,6 +49,20 @@ Files "table04b_2010 mod.xlsx", "table04b 2014 mod.xlsx", "table04b 2018 mod.xls
 
 4. Created slides 8 and 9 "Analysis phase of the project".
 
+## SEGMENT 4
+
+1. Created ML_Model branch. Discovered and fixed the missing values for North Dakota by replacing Nan with Mean values.
+
+2. Compared two models - Linear Regression and Random Forest. Created scatter plots for five top features.
+
+3. Changed simulation.csv file, so it includes 3500 rows. Updated the entire election.ipynb file.
+
+4. Updated presentation slides 7-9.
+
+5. Created a Story and published it on Tableau Public:
+https://public.tableau.com/views/HTML_MN_VoterTurnoutAnalysis/VoterTurnoutAnalysis?:language=en&:display_count=y&:origin=viz_share_link
+
+
 
 
 References:
