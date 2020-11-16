@@ -2,14 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voter Turnout Predictor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard:Turnout Predictor</title>
+
+    <!--Bootstrap core CSS-->
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+    />
+
 </head>
 <body> 
-    <h2>Voter Turnout Model
-    <h4>Top five factors: <br>related to total voter turnout in the United States.</h4>
-    </h2> 
-    <h5>Select values for each category to <br> predict voter turnout percentage.</h5>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="https://voterturnoutdashboard.herokuapp.com/"> Group Project : HTML_MN</a>
+        <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+        <ul class="navbar-nav px-3">
+          <li class="nav-item text-nowrap">
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            </button>
+          </div> 
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://voterturnoutdashboard.herokuapp.com/">Home</a></li>
+              <li><a href="https://voterturnoutdashboard.herokuapp.com/GeneralTurnout">General Turnout</a></li>
+              <li><a href="https://voterturnoutdashboard.herokuapp.com/Nonvoters">Nonvoters</a></li>
+              <li><a href="https://voterturnoutdashboard.herokuapp.com/Competitiveness">Competitiveness</a></li>
+              <li><a href="https://voterturnoutdashboard.herokuapp.com/PredictTurnout">Predict Turnout</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div class="row">
+          <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active" href="https://voterturnoutdashboard.herokuapp.com/">
+                    <span data-feather="home"></span>
+                    Home<span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://voterturnoutdashboard.herokuapp.com/GeneralTurnout">
+                    General Turnout
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://voterturnoutdashboard.herokuapp.com/Nonvoters">
+                    Nonvoters
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://voterturnoutdashboard.herokuapp.com/Competitiveness">
+                    Competitiveness
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://voterturnoutdashboard.herokuapp.com/PredictTurnout">
+                    Predict Turnout
+                  </a>
+                </li>
+                <br>
+              </ul>  
+            </div>
+          </nav>
+
+          <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+              <h1 class="h2">Voter Turnout Model</h1><br>
+            </div>
+            <h4>Top Five Influencing Factors:</h4><br>
+
+  
 <div> 
     <form action="/PredictTurnout" method="POST">
         <label for="pct_reg_of_vep_vrs_s">Percent of Registered Eligible Voters</label> 
@@ -66,11 +141,15 @@
         </select> 
         <br> 
         <input type="submit" id ="button" value="Submit"> 
-    </form> 
-    <h1>  {{prediction}} % Voter Turnout
-        <h4>Prediction based on top five feature selection and weighted percentages</h4>
-    </h1> 
+    </form> <br>
 
+        <div>
+             <h1> {{prediction}} % Voter Turnout
+                <h4>Determined via Random Forest Machine Learning Model</h4>
+            </h1>
+        </div>
+
+    </div>
 <!-- 
     <div id="hello"></div>
     <script type ="text/javascript">
@@ -86,13 +165,16 @@
    
     </script> -->
 
-
-    <!-- <script src="http://127.0.0.1:5000/static/form.js"></script>  -->
-
-    <!-- <a href="http://127.0.0.1:5000"> Return Home </a> -->
-        <a href="https://voterturnoutdashboard.herokuapp.com/"> Return Home </a>
-
-</div> 
-    
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../app/js/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
 </body> 
 </html> 
