@@ -198,6 +198,15 @@ INNER JOIN CompetivnessData as comp
 SELECT * FROM turnoutanalysisdata;
 
 
+-- Joining Data from Multiple Tables for analysis and saving as new table for National Turnout Analysis
+CREATE TABLE nationalturnoutdata AS
+SELECT
+	td.electionyear,
+	td.HighestOffice,
+	td.VEP_VotingEligiblePopulation
+FROM TurnoutData as td;
+
+SELECT * FROM nationalturnoutdata;
 
 
 
