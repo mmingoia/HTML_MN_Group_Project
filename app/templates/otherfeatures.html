@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dashboard:Turnout Predictor</title>
+    <title>Dashboard:Other Features</title>
 
     <!--Bootstrap core CSS-->
     <link
@@ -74,7 +74,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="https://voterturnoutdashboard.herokuapp.com/OtherFeatures">
+                  <a class="nav-link" href="https://public.tableau.com/profile/natalia.kuznetsova#!/vizhome/HTML_MN_VoterTurnoutAnalysis/VoterTurnoutAnalysis">
                     (Selected Other Features)
                   </a>
                 </li>
@@ -85,76 +85,20 @@
 
           <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-              <h1 class="h2">Voter Turnout Predictor</h1><br>
+              <h1 class="h2">Selected Other Features</h1><br>
             </div>
-            <h4>Top Five Influencing Factors:</h4><br>
+            <!-- <h4>Top Five Influencing Factors:</h4><br> -->
 
-  
-<div> 
-    <form action="/PredictTurnout" method="POST">
-        <label for="pct_reg_of_vep_vrs_s">Percent of Registered Eligible Voters</label> 
-        <select id="2reg_vep" name="2reg_vep"> 
-            <option value=".70"> .70 </option> 
-            <option value=".75"> .75 </option> 
-            <option value=".80"> .80 </option> 
-            <option value=".85"> .85 </option> 
-            <option value=".90"> .90 </option> 
-        </select> 
-        <br> 
-        <label for="midterm_s">Type of Election</label> 
-        <select id="1midterm" name="1midterm"> 
-            <option value="0"> 0 </option> 
-            <option value="1"> 1 </option> 
-        </select> (Presidential = 0, Midterm = 1)
-        <br> 
-        <label for="percentcitizenblack_s">Percent Black Population</label> 
-        <select id="3black" name="3black"> 
-            <option value=".03"> .03 </option> 
-            <option value=".07"> .07 </option> 
-            <option value=".10"> .10 </option> 
-            <option value=".20"> .20 </option> 
-            <option value=".30"> .30 </option> 
-            <option value=".40"> .40 </option> 
-        </select> 
-        <br> 
-        <label for="percentcitizenwhite_s">Percent White Population</label> 
-        <select id="4white" name="4white"> 
-            <option value=".50"> .50 </option> 
-            <option value=".60"> .60 </option> 
-            <option value=".70"> .70 </option> 
-            <option value=".80"> .80 </option> 
-            <option value=".85"> .85 </option> 
-            <option value=".95"> .95 </option> 
-        </select> 
-        <br> 
-        <label for="nonvoter_reg_pct_s">Percent Nonvoter: Registration Issues</label>
-        <select id="5nonvoter" name="5nonvoter"> 
-            <option value=".01"> .01 </option>
-            <option value=".02"> .02 </option>
-            <option value=".03"> .03 </option> 
-            <option value=".04"> .04 </option> 
-            <option value=".05"> .05 </option> 
-            <option value=".06"> .06 </option> 
-            <option value=".07"> .07 </option> 
-            <option value=".08"> .08 </option> 
-            <option value=".09"> .09 </option> 
-            <option value=".10"> .10 </option> 
-            <option value=".11"> .11 </option> 
-            <option value=".12"> .12 </option> 
-            <option value=".13"> .13 </option> 
-            <option value=".14"> .14 </option> 
-        </select> 
-        <br> 
-        <input type="submit" id ="button" value="Submit"> 
-    </form> <br>
+			<div class='tableauPlaceholder' id='viz1605668864348' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;H2&#47;H22JMJWYJ&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;H22JMJWYJ' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;H2&#47;H22JMJWYJ&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                
+			<script type='text/javascript'>                    
+			var divElement = document.getElementById('viz1605668864348');                    
+			var vizElement = divElement.getElementsByTagName('object')[0];                    
+			vizElement.style.width='1016px';vizElement.style.height='600px';                    
+			var scriptElement = document.createElement('script');                    
+			scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+			vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+			</script>
 
-        <div>
-             <h1> {{prediction}} % Voter Turnout
-                <h4>Determined via Random Forest Machine Learning Model</h4>
-            </h1>
-        </div>
-
-    </div>
 
 
    
