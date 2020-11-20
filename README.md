@@ -8,6 +8,10 @@ https://voterturnoutdashboard.herokuapp.com/
 
 Link to the current google slides presentation - https://docs.google.com/presentation/d/1oixOSu95qCcIpbezFxn23Q6gKf3iapaZ3pV9jCNC29s/edit?usp=sharing
 
+### Link to Tableau Story
+
+https://public.tableau.com/views/HTML_MN_VoterTurnoutAnalysis/VoterTurnoutAnalysis?:language=en&:display_count=y&:origin=viz_share_link
+
 ### Team Members
 -Hannah Gonzalez
 
@@ -73,13 +77,6 @@ Data Tables Created in the Database
       
 # Phases of the Project: 
 
-We have analyzed the dataset that was formed by statistical data used for Elections Performance Index, competitiveness of elections and demographic data of voters for the past six Federal elections of the United States. 
-
-First, we considered a Linear Regression Model. However, we agreed a Random Forest Model would provide better accuracy score for the statistical analysis of voter turnout.
-
-We have sorted the most significant factors and evaluate those which might strongly skew the data, rerunning our model on a modified feature list as needed.
-
-
 ## Phase 1
  -This histogram illustrates the per State distribution of turnout rate in the past six elections - from 2008 to 2018.
  -The majority of states have approximately 0.6 turnout.
@@ -89,22 +86,30 @@ We have sorted the most significant factors and evaluate those which might stron
 ![Vote Turnout](Images/ImagePhase1.PNG)
 
 ## Phase 2
-Random Forest analysis shows this prioritized list of features as the most important indicators of turnout. The number shows the importance of the feature
-
-![Vote Turnout](Images/ImagePhase2.PNG)
-
-## Phase 3
 These scatterplots for five top features illustrate that application of Linear Regression Model would be less appropriate because there is no linear relationship between the parameters and the target variable.
 
 ![Vote Turnout](Images/ImagePhase3.PNG)
 
 ![Vote Turnout](Images/ImagePhase%203-1.PNG)
 
+## Phase 3
+Random Forest analysis shows this prioritized list of features as the most important indicators of turnout. The number shows the importance of the feature
+
+![Vote Turnout](Images/ImagePhase2.PNG)
+
+We have analyzed the dataset that was formed by statistical data used for Elections Performance Index, competitiveness of elections and demographic data of voters for the past six Federal elections of the United States. 
+
+We considered Multiple Linear Regression Model and Random Forest Algorithm. Accuracy score of Random Forest Regressor is 91.2 - 91.3%%.
+
+Prediction by Random Forest and actual Turnout correlates well, as  Pearson correlation coefficient equals to 0.931 vs the coefficient between predicted by Linear Regression Model and real values  is 0.919.
+
 ## Technologies and Tools:
 
 -Dashboard
   - Hosted on Heroku
   - Flask app
+
+-Tableau
 
 -Database
   - PostgresSQL(Hosted on Amazon RDS)
@@ -119,24 +124,27 @@ These scatterplots for five top features illustrate that application of Linear R
 -Python
 
 
-## Result of Analysis
+## Result of the Analysis
 
-We were able to determine top 5 factors for voter turnout:
+We have determined top 5 factors for voter turnout:
 1. Midterm vs. Presidential
-2. Registration 
-3. Percentage of African American voters 
-4. Percentage of White Voters 
-5. Percentage of non-voters due to registration problem
+2. Percentage of Registered voters
+3. Percentage of non-voters due to registration problem
+4. Percentage of African American voters 
+5. Percentage of White Voters 
+
+We have built Random Forest Model for predicting the target variable - voter turnout, based on these factors with 91.3% accuracy.
+
 
 ## Recommendation for future analysis 
     
 - For our future election voters will gather data based on education and income. 
-- Get historical voter data on from each state. 
-- How absentee ballots have impacted outcomes major elections. Effect of increased absentee ballots in 2020, will that increase stay, or drop in the future
-- How electoral college is in comparison to popular vote from other developed countries. 
+- Get historical voter data from each state. 
+- Analyze how absentee ballots have impacted outcomes major elections. Effect of increased absentee ballots in 2020, will that increase stay or drop in the future
+- Compare electoral college with popular vote in other developed countries. 
 - Gather more data of voter trends 
 
 ## Communication Protocols:
-We as a group will communicate though our Slack Channel, during class and after class hours. During our time we will discuss the outline, tasks for each member, and assistance as needed to complete the segment on time.
+We as a group have been communicating though our Slack Channel, during class and after class hours. During our time we discuss the outline, tasks for each member, and assistance as needed to complete the segment on time.
 
 ![Vote Turnout](Images/download.png).  ![Vote Turnout](Images/download.jpg). ![Vote Turnout](Images/download-1.jpg)
