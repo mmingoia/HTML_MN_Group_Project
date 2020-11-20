@@ -63,6 +63,11 @@ def result():
         return render_template("model.html", prediction = prediction) 
     return render_template('model.html')
  
+@app.route("/OtherFeatures")
+#---- Route will return the webpage with visualizations depicting turnout based on voter competitiveness
+def visualize3():
+    return render_template("otherfeatures.html")
+
 
 if __name__ == "__main__":
     app.run()
